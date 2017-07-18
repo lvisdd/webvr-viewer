@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document Library Demo</title>
+    <!-- Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/site.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aframe/0.5.0/aframe.js"></script>
+<!--
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/1.8.412/pdf.js"></script>
+ -->
+    <script src="/static/js/pdf.js"></script>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Document Library Demo</a>
+        </div>
+      </div>
+    </nav>
+
+<!--
+    <div class="jumbotron">
+    </div>
+ -->
+
+    <div class="container">
+      <div class="row">
+        <h2><a href="https://aframe.io/">A-Frame</a> Document Library Demo</h2>
+        <div class="col-md-4">
+          <div>
+            <p class="text-muted">
+              <button id="prev" type="button" class="btn btn-success">Previous</button>
+              <button id="next" type="button" class="btn btn-primary">Next</button>
+              <span>Page: <span id="page_num"></span> / <span id="page_count"></span></span>
+            </p>
+            <p class="bg-info">Drag to rotate 360-degree image with Mouse.</p>
+            <p class="bg-success">Press Arrow keys or WASD keys to move object.</p>
+            <p class="bg-warning">Press &lt;Ctrl&gt; + &lt;Alt&gt; + &lt;i&gt; to inject the <a href="https://github.com/aframevr/aframe-inspector">inspector.</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="container"> -->
+      <div class="row">
+        <div class="col-md-12">
+          <div class="center-block">
+            <a-scene inspector="url: https://aframe.io/releases/0.3.0/aframe-inspector.min.js">
+              <a-entity light="type: ambient; color: #CCC"></a-entity>
+              <a-entity camera wasd-controls look-controls position="0 0 20"></a-entity>
+            </a-scene>
+
+            <div>
+              <canvas id="thumbnail-canvas"></canvas>
+              <canvas id="the-canvas"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- </div> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="/static/js/viewer.js"></script> 
+  </body>
+</html>
